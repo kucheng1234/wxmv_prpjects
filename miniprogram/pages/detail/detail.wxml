@@ -1,0 +1,30 @@
+<wxs module="filters" src="../../utils/filters.wxs"></wxs>
+<view class="detail">
+  <video class="video" id="myVideo" autoplay="true" src="{{post.content_video[0].source_link}}" controls></video>
+  <view class="content">
+    <view class="title">{{post.title}}</view>
+    <view class="cate">#{{post.cate[0]}} / {{filters.toFix(post.duration/60) < 10 ? "0" +
+        filters.toFix(post.duration/60) : filters.toFix(post.duration/60)}}:{{filters.toFix(post.duration%60) < 10 ? "0"
+        + filters.toFix(post.duration%60) : filters.toFix(post.duration%60)}}</view>
+        <view class="introduce">{{post.intro}}</view>
+    </view>
+    <view class="btn">
+      <button wx:if="{{show}}" bindtap="getfav">加入收藏</button>
+      <button wx:if="{{!show}}" bindtap="cancel">取消收藏</button>
+    </view>
+
+    <view class="extra" wx:for="{{video}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+      <view class="title">{{item.name}}</view>
+      <view class="flex">
+        <view class="contents" wx:for="{{item.list}}" wx:for-item="i" wx:for-index="index" wx:key="index">
+          <navigator url="/pages/detail/detail?vid={{i.postid}}">
+          <image class="img" src="{{i.image}}"></image>
+          <view class="time">
+            <view>{{filters.toFix(i.duration/60) < 10 ? "0" + filters.toFix(i.duration/60) : filters.toFix(i.duration/60)}}:{{filters.toFix(i.duration%60) < 10 ? "0" + filters.toFix(i.duration%60) : filters.toFix(i.duration%60)}}</view>
+            <view class="titles">{{i.title}}</view>
+          </view>
+        </navigator>
+        </view>
+      </view>
+    </view>
+  </view>

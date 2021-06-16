@@ -1,0 +1,5 @@
+<view class="tabbar">
+  <view wx:for="{{monus}}" wx:for-item="item" wx:for-index="i" wx:key="i" bindtap="jump" data-url="{{item.url}}" wx:for-index="forindex" class="{{forindex == index ? 'active' : ''}}">
+    {{item.title}}
+  </view>
+</view>

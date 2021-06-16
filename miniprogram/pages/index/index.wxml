@@ -1,0 +1,16 @@
+<view class="index">
+  <view class="search" catchtap="jumpsearch">搜索精彩短片</view>
+  <view class="banner">
+    <swiper indicator-dots autoplay circular>
+      <swiper-item wx:for="{{banner.list}}" wx:for-item="item" wx:for-index="i" wx:key="i">
+        <image class="img" src="{{item.image}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view>
+    <list-item wx:for="{{today.list}}" wx:for-item="item" wx:for-index="index" wx:key="index" item="{{item}}"></list-item>
+  </view>
+  <view>
+    <list-item wx:for="{{posts}}" wx:for-item="item" wx:for-index="index" wx:key="index" item="{{item}}"></list-item>
+  </view>
+</view>

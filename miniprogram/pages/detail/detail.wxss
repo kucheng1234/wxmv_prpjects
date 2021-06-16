@@ -1,0 +1,59 @@
+.detail{
+  padding-bottom: 30rpx;
+}
+.video{
+  width: 100%;
+}
+.content{
+  margin: 0 54rpx;
+}
+.content .title{
+  text-align: center;
+  padding: 40rpx 0;
+  font-weight: bold;
+}
+.content .introduce{
+  font-size: 26rpx;
+}
+.content .cate{
+  text-align: center;
+  padding-bottom: 40rpx;
+  font-size: 26rpx;
+}
+.btn{
+  margin-top: 40rpx;
+}
+.extra{
+  padding-left: 54rpx;
+}
+.extra .title{
+  font-size: 24rpx;
+  margin: 40rpx 0;
+}
+.extra .flex{
+  display: flex;
+  overflow-x: auto;
+}
+.extra .contents{
+  position: relative;
+  padding-right: 20rpx;
+}
+.extra .contents .img{
+  width: 300rpx;
+  height: 150rpx;
+}
+.extra .contents .time{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 26rpx;
+  overflow:hidden;
+  width: 300rpx;
+  margin: 10rpx;
+}
+.extra .contents .titles{
+  width: 100%;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}

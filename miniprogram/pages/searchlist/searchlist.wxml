@@ -1,0 +1,20 @@
+<wxs module="filters" src="../../utils/filters.wxs"></wxs>
+<navigator wx:for="{{searchlist}}" wx:for-item="item" url="/pages/detail/detail?vid={{item.postid}}">
+<view class="lists_box">
+    <image src="{{item.image}}"></image>
+    <view class="liststext_box">
+      <view class="liststext_top">
+        {{filters.toFix(item.duration/60) < 10 ? "0" + filters.toFix(item.duration/60) : filters.toFix(item.duration/60)}}:{{filters.toFix(item.duration%60) < 10 ? "0" + filters.toFix(item.duration%60) : filters.toFix(item.duration%60)}}
+        <text wx:for="{{item.cates}}" wx:for-item="i" wx:for-index="index" wx:key="index">#{{i.catename}}</text>
+      </view>
+      <view class="liststext_bottom">{{item.title}}
+      </view>
+    </view>
+    <view class="hide"></view>
+  </view>
+</navigator>
+
+<view class="content" wx:if="{{searchshow}}">
+  <view>暂时没有搜索到内容哦</view>
+  <view>搜索别的试试吧</view>
+</view>

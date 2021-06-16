@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "list-item":"/pages/components/item/item"
+  }
+}

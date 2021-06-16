@@ -1,0 +1,12 @@
+<form bindsubmit="addsearch">
+  <view class="search">
+    <input type="text" bindinput="bindInput" value="{{kw}}" name="kw" placeholder="请输入影片名称" />
+    <button class="btn" form-type="submit">搜索</button>
+  </view>
+</form>
+<view class="hotSearch">
+<view class="title">热门搜索</view>
+  <view>
+    <text wx:for="{{searchs}}" wx:for-item="item" wx:for-index="index" wx:key="index" class="content" bindtap="add" data-value="{{item.value}}">{{item.value}}</text>
+  </view>
+</view>

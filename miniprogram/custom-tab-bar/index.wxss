@@ -1,0 +1,14 @@
+.tabbar{
+  display: flex;
+  color: #eee;
+  background-color: black;
+}
+.tabbar view{
+  flex: 1;
+  text-align: center;
+  line-height: 100rpx;
+}
+.tabbar view.active{
+  color: white;
+  border-bottom: 2px solid #fff;
+}

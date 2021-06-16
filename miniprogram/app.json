@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/channel/channel",
+    "custom-tab-bar/index",
+    "pages/search/search",
+    "pages/list/list",
+    "pages/components/item/item",
+    "pages/detail/detail",
+    "pages/me/me",
+    "pages/fav/fav",
+    "pages/searchlist/searchlist"
+  ],
+  "window": {
+    "backgroundColor": "#000000",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "挽星MV",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#eee",
+    "backgroundColor": "#000",
+    "position": "bottom",
+    "custom": true,
+    "list": [
+      {
+        "text": "发现",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "频道",
+        "pagePath": "pages/channel/channel"
+      },
+      {
+        "text": "我的",
+        "pagePath": "pages/me/me"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "usingComponents": {}
+}

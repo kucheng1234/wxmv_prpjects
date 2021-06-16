@@ -1,0 +1,7 @@
+<view class="cateall">
+  <view bindtap="jumpList" data-alias="{{item.alias}}" data-cateid="{{item.cateid}}" class="item" wx:for="{{cateAll}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <image src="{{item.icon}}"></image>
+    <text class="title">{{item.catename}}</text>
+    <view class="hide"></view>
+  </view>
+</view>

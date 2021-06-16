@@ -1,0 +1,32 @@
+.cateall{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 103.2rpx;
+}
+.cateall .item{
+  width: 50vw;
+  height: 50vw;
+  position: relative;
+}
+.cateall .item .title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  color: #eee;
+  z-index: 7;
+}
+.cateall .item image{
+  width: 100%;
+  height: 100%;
+}
+.cateall .item .hide{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.3);
+  z-index: 6;
+}

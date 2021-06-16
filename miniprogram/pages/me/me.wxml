@@ -1,0 +1,9 @@
+<button class="btn1" wx:if="{{!userInfo}}" open-type="getUserProfile" bindtap="getUserProfile">授权登录</button>
+<block wx:else>
+  <view class="imgs">
+    <image class="img" bindtap="bindViewTap" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+  </view>
+  <view class="nickName">{{userInfo.nickName}}</view>
+</block>
+<button wx:if="{{userInfo}}" bindtap="delete" class="delete">退出登录</button>
+<button wx:if="{{userInfo}}" bindtap="navToFav">查看收藏</button>
